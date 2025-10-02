@@ -1,0 +1,17 @@
+name: SkillUpdate
+description: Schema for skill registration validation
+rules:
+  - field: name
+    type: string
+    required: true
+    minLength: 3
+    maxLength: 20
+    pattern: "^[a-zA-Z0-9_]+$"
+    description: Name of the skill
+  
+  - field: value
+    type: number
+    required: true
+    min: 0.01
+    max: 500.00
+    description: Level of the skill
